@@ -1,0 +1,6 @@
+{
+  "name": "International Education Egypt - منصة التقييمات التفاعلية",
+  "description": "منصة التقييمات والأداءات التفاعلية المتكاملة لمناهج جمهورية مصر العربية من International Education Egypt مع منشئ الامتحانات الذكي وتتبع التقدم ونظام الجوائز التعليمي.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

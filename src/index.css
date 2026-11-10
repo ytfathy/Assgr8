@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+/* Base typographic scale adapted responsively across Mobile, Tablet, and Desktop */
+html {
+  font-size: 15px; /* Mobile first (320px - 639px) */
+  line-height: 1.7;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  scroll-padding-top: 105px;
+}
+
+@media (min-width: 640px) {
+  html {
+    font-size: 16.5px; /* Tablet (640px - 1023px) */
+    scroll-padding-top: 115px;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 18px; /* Desktop high legibility scale (>= 1024px) */
+    scroll-padding-top: 125px;
+  }
+}
+
+/* User-controlled font size modes (Responsive adjustments) */
+html[data-font-size="normal"] {
+  font-size: 15px;
+}
+@media (min-width: 640px) {
+  html[data-font-size="normal"] { font-size: 16.5px; }
+}
+@media (min-width: 1024px) {
+  html[data-font-size="normal"] { font-size: 18px; }
+}
+
+html[data-font-size="large"] {
+  font-size: 16.5px;
+}
+@media (min-width: 640px) {
+  html[data-font-size="large"] { font-size: 18px; }
+}
+@media (min-width: 1024px) {
+  html[data-font-size="large"] { font-size: 20px; }
+}
+
+html[data-font-size="xlarge"] {
+  font-size: 18px;
+}
+@media (min-width: 640px) {
+  html[data-font-size="xlarge"] { font-size: 20px; }
+}
+@media (min-width: 1024px) {
+  html[data-font-size="xlarge"] { font-size: 22px; }
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+body {
+  font-family: 'Cairo', 'Almarai', 'Alexandria', 'Tajawal', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  direction: rtl;
+  text-align: right;
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Eliminate tap delay on mobile devices */
+button, a, input, select, textarea {
+  touch-action: manipulation;
+}
+
+
+/* Make Arabic headings clear, bold, and inherit color naturally */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 800;
+  line-height: 1.45;
+  color: inherit;
+}
+
+/* Strict contrast protection for dark backgrounds: NEVER allow black or dark text */
+.text-white,
+.text-white h1,
+.text-white h2,
+.text-white h3,
+.text-white h4,
+.text-white h5,
+.text-white h6 {
+  color: #ffffff !important;
+}
+
+[class*="bg-slate-900"] h1,
+[class*="bg-slate-900"] h2,
+[class*="bg-slate-900"] h3,
+[class*="bg-slate-900"] h4,
+[class*="bg-slate-950"] h1,
+[class*="bg-slate-950"] h2,
+[class*="bg-slate-950"] h3,
+[class*="bg-slate-950"] h4,
+[class*="bg-blue-900"] h1,
+[class*="bg-blue-900"] h2,
+[class*="bg-blue-900"] h3,
+[class*="bg-blue-900"] h4,
+[class*="bg-indigo-950"] h1,
+[class*="bg-indigo-950"] h2,
+[class*="bg-indigo-950"] h3,
+[class*="bg-indigo-950"] h4,
+[class*="bg-black"] h1,
+[class*="bg-black"] h2,
+[class*="bg-black"] h3,
+[class*="bg-black"] h4 {
+  color: #ffffff !important;
+}
+
+/* Prevent accidental dark slate text from appearing inside dark containers */
+[class*="bg-slate-900"] .text-slate-900,
+[class*="bg-slate-900"] .text-slate-950,
+[class*="bg-slate-900"] .text-slate-800,
+[class*="bg-blue-900"] .text-slate-900,
+[class*="bg-blue-900"] .text-slate-950,
+[class*="bg-blue-900"] .text-slate-800,
+[class*="bg-indigo-950"] .text-slate-900,
+[class*="bg-indigo-950"] .text-slate-950,
+[class*="bg-indigo-950"] .text-slate-800,
+[class*="bg-black"] .text-slate-900,
+[class*="bg-black"] .text-slate-950,
+[class*="bg-black"] .text-slate-800 {
+  color: #f8fafc !important;
+}
+
+/* Form inputs & options */
+p, li, span, button, input, textarea, select {
+  line-height: 1.75;
+}
+
+input, textarea, select, button {
+  font-family: 'Cairo', system-ui, sans-serif;
+}
+
+/* Select options readable on dark backgrounds */
+select option {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+/* Custom scrollbars for clean educational UI */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
