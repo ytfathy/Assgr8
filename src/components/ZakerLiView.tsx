@@ -279,8 +279,8 @@ export const ZakerLiView: React.FC<ZakerLiViewProps> = ({
         </div>
 
         {/* 4 Student Learning Modes Tabs */}
-        <div className="mt-6 pt-4 border-t border-white/10 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3.5">
-          <div className="flex items-center gap-1.5 sm:gap-2 p-1 bg-black/30 backdrop-blur-md rounded-2xl border border-white/10 overflow-x-auto scrollbar-none flex-nowrap sm:flex-wrap max-w-full">
+        <div className="mt-6 pt-4 border-t border-white/10 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3.5">
+          <div className="flex items-center gap-1.5 sm:gap-2 p-1 bg-black/30 backdrop-blur-md rounded-2xl border border-white/10 overflow-x-auto scrollbar-none flex-nowrap max-w-full touch-pan-x">
             <button
               onClick={() => setLearningMode('poster')}
               className={`shrink-0 whitespace-nowrap flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-black transition-all cursor-pointer ${
